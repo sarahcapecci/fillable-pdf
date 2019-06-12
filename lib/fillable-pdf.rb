@@ -8,6 +8,9 @@ class FillablePDF
   FILE_READER = Rjb.import('com.itextpdf.text.pdf.PdfReader')
   PDF_STAMPER = Rjb.import('com.itextpdf.text.pdf.PdfStamper')
 
+  # skip ethical reading to open PDFs that have a random password assigned to them
+  FILE_READER.unethicalreading = true
+
   ##
   # Opens a given fillable PDF file and prepares it for modification.
   #
